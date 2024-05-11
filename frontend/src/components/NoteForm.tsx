@@ -5,7 +5,7 @@ export default function NoteForm() {
   const [note, setNote] = useState({
     title: "",
     description: "",
-    active: false,
+    active: true,
   });
   const { createNote } = useNotes();
 
@@ -41,11 +41,11 @@ export default function NoteForm() {
           <input
             type="checkbox"
             onChange={() => setNote({ ...note, active: !note.active })}
-            className="form-checkbox h-5 w-5 text-green-700 transition duration-150 ease-in-out "
+            className="form-checkbox h-5 w-5 accent-green-600"
           />
-          <span>Archive</span>
+          <span>Archived</span>
         </label>
-        <button type="submit" className="bg-green-600 px-3 block py-2 w-full font-bold">
+        <button type="submit" className="bg-green-600 px-3 block py-2 w-full font-bold hover:bg-green-500">
           Save
         </button>
       </form>

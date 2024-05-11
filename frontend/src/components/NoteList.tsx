@@ -4,11 +4,13 @@ import { useNotes } from "../context/useNotes";
 
 export default function NoteList() {
   const { notes } = useNotes();
-  const [filter, setFilter] = useState("active"); // Add this line
+  const [filter, setFilter] = useState("active");
 
-  const filteredNotes = notes.filter(note => note.active === (filter === "active")); // Add this line
+  const filteredNotes = notes.filter(
+    (note) => note.active === (filter === "active")
+  );
 
-  const handleFilterChange = (event: React.ChangeEvent<HTMLInputElement>) => { // Add this function
+  const handleFilterChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFilter(event.target.value);
   };
 
@@ -21,6 +23,7 @@ export default function NoteList() {
             value="active"
             checked={filter === "active"}
             onChange={handleFilterChange}
+            className="accent-green-600"
           />
           Active
         </label>
@@ -30,6 +33,7 @@ export default function NoteList() {
             value="archived"
             checked={filter === "archived"}
             onChange={handleFilterChange}
+            className="accent-green-600"
           />
           Archived
         </label>
@@ -40,4 +44,3 @@ export default function NoteList() {
     </div>
   );
 }
-

@@ -13,7 +13,7 @@ export class Note {
   @Prop({ trim: true })
   description: string;
 
-  @Prop({ default: false })
+  @Prop({ default: true })
   active: boolean;
 }
 

@@ -11,7 +11,7 @@ NotesApp is a full-stack application that allows users to create, edit, delete, 
 
 ## Backend Development
 
-The backend of this application is built with Nest.js and Mongoose.
+The backend of this application is built with NestJS and Mongoose.
 
 To start the backend server, navigate to the `backend` directory and run `npm run start:dev`.
 
@@ -19,7 +19,7 @@ The backend server provides a RESTful API for the frontend to interact with. It 
 
 ## Frontend Development
 
-The frontend of this application is built with React, TypeScript, Vite, and Tailwind.
+The frontend of this application is built with React, TypeScript, Vite, and Tailwind CSS.
 
 To start the frontend server, navigate to the `frontend` directory and run `npm run dev`.
 
